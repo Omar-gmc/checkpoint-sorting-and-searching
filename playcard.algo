@@ -1,0 +1,17 @@
+ALGORITHM CardSort
+VAR
+    i,j,R : INTEGER;
+    T : ARRAY_OF INTEGER;
+    
+BEGIN
+    FOR i FROM 1 TO HAND.length-1 STEP 1  DO
+            R:=T[i]
+        FOR j FROM i-1 TO 0 STEP -1  DO
+            IF (T[j]>R) THEN
+                T[j+1]:=T[j];
+                T[j]:=R;
+            END_IF
+        END_FOR
+        
+    END_FOR
+END
